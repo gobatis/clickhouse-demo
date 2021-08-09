@@ -3,7 +3,7 @@
 
 <mapper>
     <insert id="Migrate">
-        create table test.logs
+        create table if not exists test.logs
         (
         id Nullable(Int32),
         url Nullable(String),
