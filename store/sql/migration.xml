@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//gobatis.co//DTD Mapper 1.0//EN" "gobatis.co/dtd/mapper.dtd">
+
+<mapper>
+    <insert id="Migrate">
+        create table test.logs
+        (
+        id Nullable(Int32),
+        url Nullable(String),
+        input Nullable(String),
+        output Nullable(String),
+        error Nullable(String),
+        created_at Nullable(DateTime) default CAST(now(), 'Nullable(DateTime)')
+        )
+        engine = Log;
+    </insert>
+</mapper>
