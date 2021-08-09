@@ -46,6 +46,7 @@ func main() {
 	
 	fmt.Println("数据写入成功")
 	
+	// 查询数据
 	items, err := store.Mapper.QueryLog()
 	if err != nil {
 		fmt.Println("数据查询失败", err)
